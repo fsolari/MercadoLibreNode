@@ -5,17 +5,19 @@ var app = express();
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
+
+
 app.get('/', function(req, res) {
-  var drinks = [
-      { name: 'Bloody Mary', drunkness: 3 },
-      { name: 'Martini', drunkness: 5 },
-      { name: 'Scotch', drunkness: 10 }
-  ];
-  var tagline = "Any code of your own that you haven't looked at for six or more months might as well have been written by someone else.";
+  var client_id =  process.env.App_ID;
+  var secret_key = process.env.Secret_Key;
+  var redirect_uri = process.env.Redirect_URI;
+  var site_id = 'MLA';
 
   res.render('pages/index', {
-      drinks: drinks,
-      tagline: tagline
+    client_id : client_id,
+    secret_key : secret_key,
+    redirect_uri : redirect_uri,
+    site_id : site_id
   });
 });
 
