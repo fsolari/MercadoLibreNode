@@ -1,8 +1,12 @@
 var express = require('express');
 var app = express();
 
-app.get('/', function (req, res) {
-  res.sendFile('index.html', {root: __dirname });
+// views is directory for all template files
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+
+app.get('/', function(request, response) {
+  response.render('pages/index');
 });
 
 app.use(express.static(__dirname + '/assets'));
