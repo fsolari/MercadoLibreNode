@@ -6,10 +6,7 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', function (request, response) {
-    var uno = 'uno';
-    var Secret_Key = 'test2';
-    var Redirect_URI = 'test3';
-    var Site_Id = 'test4';
+
 
 
 
