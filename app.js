@@ -11,12 +11,7 @@ app.get('/', function (request, response) {
     var Redirect_URI = 'test3';
     var Site_Id = 'test4';
 
-    response.render('pages/index', {
-        App_Id: App_Id,
-        Secret_Key: Secret_Key,
-        Redirect_URI: Redirect_URI,
-        Site_Id: Site_Id
-    });
+
 
 });
 
