@@ -6,10 +6,18 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 app.get('/', function (request, response) {
-  var uno = 'uno';
+    var uno = 'uno';
+    var Secret_Key = 'test2';
+    var Redirect_URI = 'test3';
+    var Site_Id = 'test4';
 
     response.render('pages/index', {
-      uno : uno;
+        App_Id: App_Id,
+        Secret_Key: Secret_Key,
+        Redirect_URI: Redirect_URI,
+        Site_Id: Site_Id
+    });
+
 });
 
 app.use(express.static(__dirname + '/assets'));
