@@ -51,49 +51,10 @@
                     <br />
                     <br /> If you deployed this app by the Heroku Button, you need to clone this aplication to your computer by running the following on a command line shell:
                     <br />
-                    <code>heroku git:clone -a ></code>
+                    <code>heroku git:remote -a <your-app-name></code>
                     <br /> This will create a local copy of the source code, and associate the Heroku app with your local repository.</p>
                 <p>Follow the offical Heroku's guide <a target="_blank" href="https://devcenter.heroku.com/articles/git">https://devcenter.heroku.com/articles/git</a> to deploy using the Heroku cli.</p>
                 <p>You'll now be set up to run the app locally, or deploy changes to Heroku.</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <h3>Examples</h3>
-            <p>
-                Check the following examples, they will help you to start working with our API!
-            </p>
-            <p>
-                Note that these examples work for MLB(Brasil) by default. If you'd like to try them in your own country, please, update this line in your project, with
-                your own <b>$site_id</b> before executing them.
-            </p>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-sm-6 col-md-6">
-                <h3>Get User</h3>
-                <p>This example shows how you can get any MercadoLibre's user public information from our API. You only need to know the User_Id.</p>
-                <p>You can concatenate up to 50 user_id to get all the information in only one request.</p>
-           </div>
-            <div class="col-sm-6 col-md-6">
-                <h3>Get Categories</h3>
-                <p>Every site has it's own category tree. This app is configured to work by default for MercadoLibre Argentina (MLA), so this example will retrieve MLA category's tree. <a href="https://github.com/fsolari/MercadoLibreNode/blob/master/config.js">Modify the site_id setted on this file </a> if you want to try it for another country!</p>
-            </div>
-        </div>
-        <hr>
-        <div class="row">
-            <div class="col-md-6">
-                <h3>Predict Category</h3>
-                <p>
-                    To list an item in MercadoLibre, you need to know the category your product belongs to. Our Category Predictor resource uses Machine Learning to predict which category suits your product best, basing on it's title. And you can do it by simply making a GET. Try it out!
-                </p>
-                <pre class="pre-item"></pre>
-            </div>
-
-            <div class="col-md-6">
-                <h3>Get started!</h3>
-                <p>Now you know how easy it is to get information from our API. Check the rest of the examples on the SDK, and modify them as you like in order to List an item, update it, and other actions.</p>
-                <p></p>
             </div>
         </div>
 
@@ -102,16 +63,16 @@
         <div class="row">
             <h3>Your Credentials</h3>
             <div class="row-info col-sm-3 col-md-3">
-                <b>App_Id: </b>
+                <b>App_Id: <%= App_Id %></b>
             </div>
             <div class="row-info col-sm-3 col-md-3">
-                <b>Secret_Key: </b>
+                <b>Secret_Key: <%= Secret_Key %></b>
             </div>
             <div class="row-info col-sm-3 col-md-3">
-                <b>Redirect_URI: </b>
+                <b>Redirect_URI: <%= Redirect_URI %></b>
             </div>
             <div class="row-info col-sm-3 col-md-3">
-                <b>Site_Id: </b>
+                <b>Site_Id: <%= Site_Id %></b>
             </div>
         </div>
         <hr>
