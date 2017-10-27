@@ -8,16 +8,16 @@ app.set('view engine', 'ejs');
 
 
 app.get('/', function(req, res) {
-  var client_id =  "process.env.App_ID";
-  var secret_key = "process.env.Secret_Key";
-  var redirect_uri = "process.env.Redirect_URI";
-  var site_id = 'MLA';
+  var App_Id = 'uno';
+  var Secret_Key = 'test2';
+  var Redirect_URI = 'test3';
+  var Site_Id = 'test4';
 
   res.render('pages/index', {
-    client_id : client_id,
-    secret_key : secret_key,
-    redirect_uri : redirect_uri,
-    site_id : site_id
+      App_Id : App_Id,
+      Secret_Key : Secret_Key,
+      Redirect_URI : Redirect_URI,
+      Site_Id : Site_Id
   });
 });
 
@@ -26,3 +26,5 @@ app.use(express.static(__dirname + '/assets'));
 app.listen(process.env.PORT || 5000, function () {
     console.log('Example app listening on port 5000!');
 });
+
+
