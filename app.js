@@ -7,14 +7,14 @@ app.set('view engine', 'ejs');
 
 app.get('/', function (request, response) {
     var credentials = [
-        { name: 'App_Id', "meee" },
-        { name: 'Secret_Key', "meee2" },
-        { name: 'Redirect_URI', "meee3" },
-        { name: 'Site_Id', "meee4" },
+        { App_Id: 'meee' },
+        { Secret_Key: 'meee2' },
+        { Redirect_URI: 'meee3' },
+        { Site_Id: 'meee4' },
     ];
 
     response.render('pages/index', {
-      credentials : credentials
+        credentials: credentials
     });
 });
 
