@@ -13,12 +13,14 @@ app.get('/', function(req, res) {
   var secret_key = process.env.Secret_Key;
   var redirect_uri = process.env.Redirect_URI;
   var site_id = 'MLA';
+  var appname = req.subdomains;
 
   res.render('pages/index', {
     client_id : client_id,
     secret_key : secret_key,
     redirect_uri : redirect_uri,
-    site_id : site_id
+    site_id : site_id,
+    appname : appname
   });
 });
 
