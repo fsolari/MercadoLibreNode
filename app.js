@@ -8,9 +8,9 @@ app.set('view engine', 'ejs');
 
 
 app.get('/', function(req, res) {
-  var client_id =  process.env.App_ID;
-  var secret_key = process.env.Secret_Key;
-  var redirect_uri = process.env.Redirect_URI;
+  var client_id =  "process.env.App_ID";
+  var secret_key = "process.env.Secret_Key";
+  var redirect_uri = "process.env.Redirect_URI";
   var site_id = 'MLA';
 
   res.render('pages/index', {
